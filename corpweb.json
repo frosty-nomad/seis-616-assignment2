@@ -160,7 +160,7 @@
         "InstanceType": {
           "Ref": "InstanceType"
         },
-        "ImageId": "ami-0ca4d5db4872d0c28",
+        "ImageId": "ami-08982f1c5bf93d976",
         "KeyName": {
           "Ref": "KeyPair"
         },
@@ -201,7 +201,7 @@
         "InstanceType": {
           "Ref": "InstanceType"
         },
-        "ImageId": "ami-0ca4d5db4872d0c28",
+        "ImageId": "ami-08982f1c5bf93d976",
         "KeyName": {
           "Ref": "KeyPair"
         },
@@ -295,6 +295,10 @@
         "Port": 80,
         "Protocol": "HTTP",
         "TargetType": "instance",
+        "Targets": [
+          { "Id": { "Ref": "web1" }, "Port": 80 },
+          { "Id": { "Ref": "web2" }, "Port": 80 }
+        ],
         "VpcId": {
           "Ref": "EngineeringVpc"
         },
